@@ -9,10 +9,12 @@ Repository Contents:
 This file includes the practice questions solved for the topics list comprehension and lambda expressions.
 
 Project:
+
 2. Bill Printing System
 A mini project that generates and prints restaurant bills using Python logic, file handling, and structured formatting.
 
 Assignments:
+
 3. Python Assignment 1
 This document includes the practice questions solved for various topics of python including: Loops, Conditional statements, Functions, OOPs
 
