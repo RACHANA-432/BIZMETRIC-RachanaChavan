@@ -714,6 +714,73 @@ class BookAllotment:
 b = BookAllotment()
 b.generate_bill()
 
+# ---------
+
+# 15.	Create an interest bucket for Fix Deposit in the bank. 
+# Ask user to enter start date and end date for the FD and check which bucket list it belongs to and assign the interest rate
+
+
+from datetime import datetime
+
+
+class FDAccount:
+
+    def __init__(self, start_date, end_date):
+        self.start_date = start_date
+        self.end_date = end_date
+        self.days = 0
+        self.interest_rate = 0
+
+    def calculate_days(self):
+        d1 = datetime.strptime(self.start_date, "%d-%m-%Y")
+        d2 = datetime.strptime(self.end_date, "%d-%m-%Y")
+
+        diff = d2 - d1
+        self.days = diff.days
+
+    def assign_interest(self):
+
+        if 7 <= self.days <= 45:
+            self.interest_rate = 5.75
+
+        elif 46 <= self.days <= 179:
+            self.interest_rate = 6.25
+
+        elif 180 <= self.days <= 210:
+            self.interest_rate = 6.35
+
+        elif 211 <= self.days < 365:
+            self.interest_rate = 6.40
+
+        elif 365 <= self.days < 730:
+            self.interest_rate = 7.00
+
+        elif 730 <= self.days < 1095:
+            self.interest_rate = 6.75
+
+        elif 1095 <= self.days < 1825:
+            self.interest_rate = 6.70
+
+        elif 1825 <= self.days <= 3650:
+            self.interest_rate = 6.60
+
+        else:
+            self.interest_rate = "Invalid tenure"
+
+    def display(self):
+        print("FD Tenure (days):", self.days)
+        print("Interest Rate:", self.interest_rate, "%")
+
+start = input("Enter FD Start Date (dd-mm-yyyy): ")
+end = input("Enter FD End Date (dd-mm-yyyy): ")
+
+fd = FDAccount(start, end)
+
+fd.calculate_days()
+fd.assign_interest()
+fd.display()
+
+
 # ---------------
 
 
@@ -1404,4 +1471,5 @@ print(bill_text)
 bill = open("C:/Users/Rachana/Downloads/Bill-file.txt", 'w')
 bill.write(bill_text)
 bill.close()
+
 
