@@ -95,13 +95,8 @@ class Restaurant:
                 print("Error placing order:", e)
                 return
 
-            # ch = input("Add more items? (yes/no): ").lower()
-            # if ch != "yes":
-            #     break
-
             while True:
                 ch = input("Add more items? (yes/no): ").lower()
-
                 if ch == "yes":
                     break     
                 elif ch == "no":
@@ -223,3 +218,4 @@ while True:
         break
     else:
         print("Invalid choice")
+
