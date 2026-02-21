@@ -13,12 +13,15 @@ Project:
 2. Bill Printing System - 
 A mini project that generates and prints restaurant bills using Python logic, file handling, and structured formatting.
 
+3. College Fees Calculation System -
+A mini project that calculates the college fees of a student based on the subject and other selections like - hostel, food, transport etc. using OOPs concepts, python functions and file handling.
+
 Assignments:
 
-3. Python Assignment 1 - 
+4. Python Assignment 1 - 
 This document includes the practice questions solved for various topics of python including: Loops, Conditional statements, Functions, OOPs
 
-4. Assessment PDF - 
+5. Assessment PDF - 
 Submitted assessment containing problem statements and solutions.
 
 
